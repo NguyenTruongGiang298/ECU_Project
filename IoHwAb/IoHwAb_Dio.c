@@ -10,7 +10,6 @@
  * @return DATA_OK or DATA_ERROR
  * 
  */
-
 iohwab_err_t IoHwAb_WriteDirection(uint8_t channelId, int direction)
 {
     Dio_WriteChannel(channelId, direction);

@@ -14,10 +14,6 @@
 #include <stdlib.h>
 #include <error.h>
 
-#define CSV_PATH    "C:/C_C++/C/ECU_Project/UI/Data.csv"
-#define BUFFER_SIZE 512
-
-
 /*****************************************************************************
  * @fn				- csv_getInt
  * @brief			- This function retrieves an integer value from a CSV file.

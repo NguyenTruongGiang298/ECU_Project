@@ -14,6 +14,9 @@
 #include <stdio.h>
 
 #define ERROR -1
+#define CSV_PATH    "C:/C_C++/C/ECU_Project/UI/Data.csv"
+#define BUFFER_SIZE 512
+
 
 int CSV_getInt(const char *key);
 char* CSV_getString(const char *key);

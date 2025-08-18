@@ -11,7 +11,7 @@
 #include "csv_io.h"
 
 static int adcInitialized = 0;
-const char* ADC_KEY_NAMES[] = {
+static const char* ADC_KEY_NAMES[] = {
     "temp",
     "voltage",
     "current",

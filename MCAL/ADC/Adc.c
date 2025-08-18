@@ -1,7 +1,17 @@
+/***************************************************************************
+ * @file    Adc.c
+ * @brief   Khai báo các hàm và cấu trúc liên quan đến đọc giá trị ADC.
+ * @details Cung cấp định nghĩa cho API đọc giá trị ADC từ các kênh khác nhau. 
+ *          Mô phỏng đọc các tín hiệu analog từ cảm biến.
+ * @version 1.0
+ * @date    2025-08-18
+ * @author  Nguyen Truong Giang
+ ***************************************************************************/
 #include "adc.h"
+#include "csv_io.h"
 
 static int adcInitialized = 0;
-const char* const ADC_KEY_NAMES[] = {
+const char* ADC_KEY_NAMES[] = {
     "temp",
     "voltage",
     "current",

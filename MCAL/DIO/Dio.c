@@ -1,4 +1,16 @@
+/***************************************************************************
+ * @file    Dio.c
+ * @brief   Declaration of functions and structures related to digital 
+ *          INPUT/OUTPUT signal control.
+ * @details Provides definitions of APIs for initializing and writing values to
+ *          control motor rotation direction. Used to simulate digital signal.
+ * @version 1.0
+ * @date    2025-08-18
+ * @author  Nguyen Truong Giang
+ ***************************************************************************/
+
 #include "Dio.h"
+#include "csv_io.h"
 
 static int dioInitialized = 0;
 

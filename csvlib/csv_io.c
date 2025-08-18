@@ -1,8 +1,22 @@
+/***************************************************************************
+ * @file    csv_io.c
+ * @brief   Declaration of functions and structures related to CSV file communication.
+ * @details Provides definitions for APIs to read/write CSV files in key-value format,
+ *          used across all MCAL modules.
+ *          Enables access to or updates of simulated input/output data.
+ * @version 1.0
+ * @date    2025-08-18
+ * @author  Nguyen Truong Giang
+ ***************************************************************************/
+
 #include "csv_io.h"
+#include <string.h>
+#include <stdlib.h>
+#include <error.h>
 
 #define CSV_PATH    "C:/C_C++/C/ECU_Project/UI/Data.csv"
 #define BUFFER_SIZE 512
-#define ERROR -1
+
 
 /*****************************************************************************
  * @fn				- csv_getInt

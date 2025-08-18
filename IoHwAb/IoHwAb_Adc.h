@@ -1,10 +1,18 @@
+/***************************************************************************
+ * @file    IoHwAb_Adc.h
+ * @brief   Provides APIs for abstracting ADC channel readings.
+ * @details This file provides the interface for reading ADC channels (Temperature,
+ *          Current, Voltage, etc.) at the Abstraction Layer.
+ * @version 1.0
+ * @date    2025-08-18
+ * @author  Nguyen Truong Giang
+ ***************************************************************************/
+
 #ifndef IOHWAB_ADC_H
 #define IOHWAB_ADC_H
 
 #include <stdio.h>
-#include <string.h>
 #include <stdint.h>
-#include "Adc.h"
 
 #define ADC_12_BIT (1<<12)
 #define MAX_TEMPERATURE 200.0

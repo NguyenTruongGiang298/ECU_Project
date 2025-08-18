@@ -1,12 +1,19 @@
-#include "IoHwAb_Adc.h"
+/***************************************************************************
+ * @file    IoHwAb_Adc.c
+ * @brief   Provides APIs for abstracting ADC channel readings.
+ * @details This file defines functions for reading ADC channels (Temperature,
+ *          Current, Voltage, etc.) at the Abstraction Layer.
+ * @version 1.0
+ * @date    2025-08-18
+ * @author  Nguyen Truong Giang
+ ***************************************************************************/
 
+#include "IoHwAb_Adc.h"
+#include "Adc.h"
 /**
  * @fn IoHwAb_ReadTemp
- * 
  * @brief API to read Temperature(C) from MCU in Abstraction Layer
- * 
  * @param[in,out] uint16_t *temp_adc, float* temp_C
- * 
  * @return DATA_OK or DATA_ERROR
  * 
  */

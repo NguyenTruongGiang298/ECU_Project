@@ -1,5 +1,15 @@
+/***************************************************************************
+ * @file    Can.c
+ * @brief   Declaration of functions and structures related to data 
+ *          transmission and reception via the CAN protocol.
+ * @details Provides APIs definitions for initializing and reading CAN frames. 
+ *          Simulates CAN frame transmission/reception using strings in a CSV file.   
+ * @version 1.0
+ * @date    2025-08-18
+ * @author  Nguyen Truong Giang
+ ***************************************************************************/
 #include "Can.h"
-
+#include "csv_io.h"
 
 static int canInitialized = 0;
 

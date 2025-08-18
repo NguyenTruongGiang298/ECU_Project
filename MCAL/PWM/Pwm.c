@@ -1,5 +1,16 @@
+/***************************************************************************
+ * @file    Pwm.c
+ * @brief   Declaration of functions and structures related to PWM control.
+ * @details Provides definitions of APIs for initializing and writing pulse widths.
+ *          Used to simulate speed changes (duty cycle) of a motor.
+ * @version 1.0
+ * @date    2025-08-18
+ * @author  Nguyen Truong Giang
+ ***************************************************************************/
+
 #include "Pwm.h"
- 
+#include "csv_io.h"
+
 static uint8_t pwmInitialized=0;
 
 /*****************************************************************************

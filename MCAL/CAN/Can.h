@@ -17,8 +17,7 @@
 #define MAX_DATA_BYTES 8
 
 void Can_Init(void);
-void Can_Receive(uint32_t* canId, uint8_t* data, uint8_t* dlc);
-
+void Can_Receive(uint16_t* canId, uint8_t* data, uint8_t* dlc);
 
 
 #endif

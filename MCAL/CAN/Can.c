@@ -10,6 +10,9 @@
  ***************************************************************************/
 #include "Can.h"
 #include "csv_io.h"
+#include <stdlib.h>
+#include <string.h>
+#include "Canif.h"
 
 static int canInitialized = 0;
 
@@ -33,14 +36,16 @@ void Can_Init(void)
  *                      - uint8_t* dlc: the number of byte data.
  * @return			    - Non-return.
  */
-void Can_Receive(uint32_t* canId, uint8_t* data, uint8_t* dlc)
+void Can_Receive(uint16_t* canId, uint8_t* data, uint8_t* dlc)
 {
     if (!canInitialized) {
+        printf("Failed to initialize CAN driver\n");
         return;
     }
     char *frameStr = CSV_getString("can");
      if (!frameStr) {
         /* invalid string */
+        printf("Failed to get CAN frame from CSV.\n");
         return;
     }
     char *token = strtok(frameStr, " ");
@@ -84,9 +89,7 @@ void Can_Receive(uint32_t* canId, uint8_t* data, uint8_t* dlc)
         }
         data[i] = (uint8_t)byteVal;
     }
+    // Send to CanIf for handling subsequently
+    CanIf_Receive(*canId, data, *dlc);
     free(frameStr);
 }
-
-
-
-
